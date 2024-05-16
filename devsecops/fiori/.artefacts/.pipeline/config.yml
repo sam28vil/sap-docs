@@ -1,0 +1,45 @@
+general:
+  buildTool: "npm"     
+service: 
+  buildToolVersion: "N18"
+  cloudConnectors:
+    transportRequestUploadCTS:
+      credentialId: "cloudconnector-devsecops"
+  stages:
+    Build:
+      credentialVariables:
+        - name: "PIPER_token"
+          credentialId: "github-secretkey-text"
+      stringVariables:
+        - name: "PIPER_DISABLE_EXTENSIONS"
+          value: "false"
+    Release:
+      credentialVariables:
+        - name: "PIPER_token"
+          credentialId: "github-secretkey-text"
+      stringVariables:
+        - name: "PIPER_DISABLE_EXTENSIONS"
+          value: "false"
+stages:
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: false
+  Malware Scan: 
+     malwareExecuteScan: true  
+  Compliance:
+    sonarExecuteScan: false
+  Release:
+    transportRequestUploadCTS: true
+steps:
+  artifactPrepareVersion:
+    versioningType: "cloud"
+    gitHttpsCredentialsId: "github-secretkey"
+  npmExecuteLint: 
+    failOnError: false
+  transportRequestUploadCTS:                                                               # only relevant, if you set the cloudFoundryDeploy parameter in the Release stage to true 
+    endpoint: 'http://gateway.hec.atem.com.br:443'
+    uploadCredentialsId: 's4-secretkey' 
+    client: '100'
+    abapPackage: "[AJUSTAR ===>] PACOTE ABAP, eg.: ZUI5... [<=== AJUSTAR]"
+    applicationName: "[AJUSTAR ===>] NOME DA APLICAÇÃO, eg.: ZBSP... [<=== AJUSTAR]"
+    transportRequestId: "[AJUSTAR ===>] ID DA REQUEST [<=== AJUSTAR]"
