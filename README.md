@@ -1,4 +1,4 @@
 # Documentações
 
 - [cpi](cpi)
-- [DevSecOps](DevSecOps)
+- [DevSecOps](devsecops)
