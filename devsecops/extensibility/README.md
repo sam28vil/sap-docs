@@ -11,7 +11,7 @@
 
 A extensibilidade do usuário principal permite que especialistas de negócios criem extensões para o SAP S/4HANA Cloud, principalmente sem uma única linha de código .
 
-![img-04.png](.images/img-04.png)
+![img-04.jpeg](.images/img-04.png)
 
 The basic buildings blocks of the extensibility concept are:
 
@@ -74,7 +74,7 @@ Ambiente SAP S/4HANA ABAP (também conhecido como Steampunk incorporado)
 
 ### O que é o modelo de extensibilidade de três camadas para nuvem privada/OP S/4HANA?
 
-![img-05.png](.images/img-05.png)
+![img-05.jpeg](.images/img-05.png)
 
 1) Tier 1 (ABAP CLOUD)
 
