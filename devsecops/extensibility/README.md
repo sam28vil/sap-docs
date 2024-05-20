@@ -6,12 +6,12 @@
     - [Side-by-side extensions on SAP BTP](#o-que-e-extensibilidade-lado-a-lado)
     - [Referências](#referências)
 
-![img-02.png](.images/img-02.png)
+![img-02.png](.images/img-02.png) 
 
 
 A extensibilidade do usuário principal permite que especialistas de negócios criem extensões para o SAP S/4HANA Cloud, principalmente sem uma única linha de código .
 
-![img-04.jpeg](.images/img-04.png)
+![img-04.png](.images/img-04.png)
 
 The basic buildings blocks of the extensibility concept are:
 
@@ -74,57 +74,25 @@ Ambiente SAP S/4HANA ABAP (também conhecido como Steampunk incorporado)
 
 ### O que é o modelo de extensibilidade de três camadas para nuvem privada/OP S/4HANA?
 
-![img-05.jpeg](.images/img-05.png)
-
-1) Tier 1 (ABAP CLOUD)
-
-Somente tipos de objetos ABAP Cloud aprovados (artefatos de modelo de programação de aplicativos RESTful ABAP, por exemplo) podem ser desenvolvidos
-A linguagem ABAP Cloud é aplicada por meio de verificação de sintaxe
-O uso de APIs lançadas é imposto por meio de uma verificação de sintaxe
-As ferramentas de desenvolvimento ABAP para Eclipse são usadas para criar todos os objetos de desenvolvimento
-
-Casos de uso de nível 1:
-
-Adicionar um campo personalizado em uma tabela de banco de dados ou uma visualização CDS por meio de extensão lançada inclui
-Implementando um SAP BAdI lançado
-Criando um aplicativo SAP Fiori personalizado baseado em modelo de programação de aplicativos RESTful ABAP
-
-2) Tier 2
-
-Para minimizar possíveis interrupções de atualização de software, o desenvolvimento de nível 2 só pode ser feito usando uma abordagem de nível 1 e, portanto, todas as regras de nível 1 também se aplicam ao nível 2 (com exceção do uso do wrapper personalizado). 
-
-Casos de uso de nível 2:
-
-Criando uma classe wrapper em torno de quaisquer objetos SAP que não foram liberados (por exemplo, BAPI)
-Criando uma visualização CDS wrapper para uma tabela SAP ou uma visualização CDS que não foi liberada
-Criando uma interface de modelo de programação de aplicativo ABAP RESTful em torno de objetos SAP não lançados
-
-3) Tier 3
-
-A camada final disponível para clientes é reservada para extensibilidade clássica baseada em código ABAP customizado que não é implementável usando a abordagem de camada 1 ou camada 2. Este nível acarreta o maior risco de interrupções de atualização de software e a SAP sugere evitar o desenvolvimento nesta camada em favor do nível 1 ou nível 2 para minimizar este risco.
+![img-05.png](.images/img-05.png)
 
 
 ### ABAP CLOUD
-
-1) Steampunk: crie aplicativos e extensões ABAP Cloud no SAP BTP (lado a lado com SAP S/4HANA)
-
-2) Steampunk incorporado: crie extensões ABAP Cloud no SAP S/4HANA (todas as edições)
 
 Desenvolvimento ABAP Cloud significa:
 
 Use APIs SAP públicas (locais ou remotas) lançadas pela SAP para acessar funcionalidades e dados SAP.
 
-Use pontos de extensão SAP públicos liberados pela SAP para estender objetos SAP. Modificações em objetos SAP não são suportadas.1
+Use pontos de extensão SAP públicos liberados pela SAP para estender objetos SAP. Modificações em objetos SAP não são suportadas.
 
 Use ADT (ferramentas de desenvolvimento ABAP) como seu ABAP IDE
 
 Use RAP (ABAP RESTful Application Programming Model) para criar aplicativos e serviços Fiori. Tecnologias SAP como Dynpro ou Web Dynpro não são liberadas para desenvolvimento ABAP Cloud
 
-The ABAP Cloud development rules are enforced via:
 
-ABAP compiler and runtime checks: We introduced a new ABAP language version = “ABAP for Cloud Development” for ABAP Cloud. This ABAP language version defines the set of supported ABAP statements (e.g, no CALL SCREEN) and launches syntax- or runtime errors if for example, a non-public SAP API is used.
+Steampunk: crie aplicativos e extensões ABAP Cloud no SAP BTP (lado a lado com SAP S/4HANA)
 
-ABAP authorization checks: We redefined the authorizations in the ABAP Cloud developer role. For example, no authorization to change SAP objects.
+Steampunk incorporado: crie extensões ABAP Cloud no SAP S/4HANA (todas as edições)
 
 OBS: Acesso a tabelas SAP nao e mais permitido no modelo de exensibilidade cloud, apenas atraves de CDS View
 
@@ -141,4 +109,4 @@ OBS: Acesso a tabelas SAP nao e mais permitido no modelo de exensibilidade cloud
 
 - [Steampunk incorporado – Mais alguns detalhes para desenvolvedores ABAP](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/embedded-steampunk-some-more-details-for-abap-developers/ba-p/13532714)
 
-- [Explaining Extensibility Model Best Practices](https://learning.sap.com/learning-journeys/practicing-clean-core-extensibility-for-sap-s-4hana-cloud/explaining-extensibility-model-best-practices_e290f382-800e-40ef-a203-85a13115f487)
+-[Praticing Clean Core Extensibility for S4HANA Cloud](https://learning.sap.com/learning-journeys/practicing-clean-core-extensibility-for-sap-s-4hana-cloud/explaining-extensibility-model-best-practices_e290f382-800e-40ef-a203-85a13115f487)
