@@ -96,6 +96,63 @@ Steampunk incorporado: crie extensões ABAP Cloud no SAP S/4HANA (todas as ediç
 
 OBS: Acesso a tabelas SAP nao e mais permitido no modelo de exensibilidade cloud, apenas atraves de CDS View
 
+
+S4 Public Extensibility
+
+- Custom Field.
+- Custom Business Object.
+- Custom Logic
+- Custom CDS View
+
+
+### Custom Code Clustering
+
+Custom Code Analytics é um novo aplicativo SAP ONE Support Launchpad.
+
+Usar a ferramenta Custom Code Analytics é o primeiro passo para obter uma compreensão completa e transparência da pegada do Custom Code em seus sistemas produtivos.
+
+**Perguntas para se fazer:** Mas quantos objetos de código personalizado você possui? Quais destes são usados ​​e quais não são usados? Qual é a classificação de qualidade de cada objeto?
+
+- O aplicativo Custom Code Analytics fornecerá total transparência da pegada do código personalizado.
+
+- As informações podem ser usadas como ponto de partida para uma discussão baseada em fatos  em relação às atividades de código personalizado.
+
+- Recomendações proativas baseadas no status real do sistema, permitindo insights para ação em código personalizado.
+
+Tambem temos o **SAP Custom Migration Clustering**
+
+1) Analise de codigo personalizado
+
+2) Jornada do nucleo limpo: transformação de código personalizado que pode incluir recomendações para descontinuar ou corrigir aplicativos personalizados ou reestruturar o sistema para SAP BTP
+
+3) Preparacao para a nuvem: extensibility side-by-side 
+
+- Voce pode inovar o seu cliente a melhorar o processo de negocio, otimizando, modernizando o proprio codigo customizado, visando a reducao de custo do TCO.
+
+![img-06.png](.images/img-06.png)
+
+Obs: O custo total de propriedade (TCO) é a soma de todos os custos associados a projetos e serviços associados à TI.
+
+![img-07.png](.images/img-07.png)
+
+O que faz o Custom Code Clustering?
+
+![img-08.png](.images/img-08.png)
+
+
+BENEFÍCIOS:
+■ Transparência aprimorada de dependências de objetos de código personalizado
+■ Menores custos de manutenção
+■ Redução da pegada de código personalizado
+■ Software flexível pronto para nuvem
+
+[Custom Code Analytics - Uma ferramenta para total transparência de código personalizado](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/custom-code-analytics-one-tool-for-complete-custom-code-transparency/ba-p/13471159)
+[Explore the New Highlight of Custom Code Management — the Custom Code Clustering](https://www.youtube.com/watch?v=pj-L2TEjlLI)
+[SAP ICCM](https://community.sap.com/t5/crm-and-cx-blogs-by-sap/sap-premium-engagement-session-quot-sap-intelligent-custom-code-management/ba-p/13579817)
+
+(https://www.sap.com/documents/2022/03/38e61372-1e7e-0010-bca6-c68f7e60039b.html?source=social-Global-TWITTER-AudienceEngagement%28old%29-DBS-Services-SAPServices-spr-6750859591-account_name&campaigncode=CRM-YF22-SSM-1463034&sprinklrid=6750859591)
+
+
 ### Referências
 
 - [SAP S/4HANA Extensibility – Simplified Guide for Beginners](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/sap-s-4hana-extensibility-simplified-guide-for-beginners/ba-p/13548988)
